@@ -1,23 +1,22 @@
 import { Stack } from "expo-router";
-import './global.css';
-import 'react-native-gesture-handler';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
-import { UserProvider } from "@/lib/UserContext";
-import { StatusBar } from "expo-status-bar";
 
-
-export default function RootLayout() {
+export default function AppLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <BottomSheetModalProvider>
-        <UserProvider>
-            <StatusBar style='dark' />
-            <Stack screenOptions={{ headerShown: false }}>
-              <Stack.Screen name="(tabs)" />
-            </Stack>
-        </UserProvider>
-      </BottomSheetModalProvider>
-    </GestureHandlerRootView>
-  );
+    <Stack>
+      <Stack.Screen
+        name="(tabs)"
+        options={{
+          headerShown: false,
+          animation: "fade_from_bottom",
+        }}
+      />
+      <Stack.Screen
+        name="menuCategory/[menuCategory]"
+        options={{
+          headerShown: false,
+          animation: "fade_from_bottom",
+        }}
+      />
+    </Stack>
+  )
 }

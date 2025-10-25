@@ -15,7 +15,7 @@ export default function NotLoggedInScreen(props: Props) {
 
     return (
          <React.Fragment>
-            <View className="w-full relative items-center overflow-hidden" style={{ height: windowHeight * 0.45}}>
+            <View className="w-full relative items-center overflow-hidden bg-slate-300" style={{ height: windowHeight * 0.45}}>
                 <Text className="text-center text-white w-[65%] font-semibold text-3xl top-[35] absolute shadow-md" style={{ zIndex: 1 }}>{props.title}</Text>
                 <Image
                     source={props.image}

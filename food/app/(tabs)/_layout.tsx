@@ -17,19 +17,6 @@ export default function TabLayout() {
                     position: 'absolute',
                     height: 85,
                 },
-                tabBarIconStyle: {
-                    marginBottom: 0,
-                    marginTop: 0,
-                    paddingTop: 0,
-                    paddingBottom: 0,
-                    paddingHorizontal: 0,
-                    borderTopWidth: 0,
-                    borderBottomWidth: 0,
-                    borderLeftWidth: 0,
-                    borderRightWidth: 0,
-                    borderRadius: 0,
-                    backgroundColor: 'transparent',
-                },
             }}
         >
             <Tabs.Screen 

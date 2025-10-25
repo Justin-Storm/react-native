@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView } from "react-native";
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "@/constants/colors";
@@ -34,6 +34,11 @@ export default function SignIn() {
 
     return (
         <View className="flex-1 px-4 items-center justify-center">
+            <KeyboardAvoidingView
+                behavior="padding"
+                keyboardVerticalOffset={100}
+                className="w-full items-center"
+            >
             {signUp ? (
                 <React.Fragment>
                     <Text className="text-2xl font-bold mb-4" onPress={() => logout(setUser)}>Sign Up</Text>
@@ -130,6 +135,7 @@ export default function SignIn() {
                 </View>
             </React.Fragment>
             )}
+            </KeyboardAvoidingView>
         </View>
     );
 };
